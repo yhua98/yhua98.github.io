@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const IconSize = 24
+---
+
+<div class="header">
+    <div class="logo">
+        <span>YHUAONE.CN</span>
+    </div>
+    <div class="nav">
+        <Icon class="nav-item" size={IconSize} name="mdi:home-search" />
+        <Icon class="nav-item" size={IconSize} name="mdi:paper-text" />
+        <Icon class="nav-item" size={IconSize} name="mdi:tags" />
+        <Icon class="nav-item" size={IconSize} name="mdi:about" />
+    </div>
+</div>
+
+<style>
+    .header {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        position: relative;
+    }
+
+    .header > .logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+    }
+
+    .logo > span{
+        font-size: 1.5rem;
+    }
+
+    .header > .nav {
+        margin: 0 auto;
+        padding: 8px;
+        border: 2px solid rgb(47, 39, 62);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav > .nav-item {
+        cursor: pointer;
+    }
+</style>

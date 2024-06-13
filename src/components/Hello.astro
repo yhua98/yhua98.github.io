@@ -1,0 +1,40 @@
+---
+import {Icon} from 'astro-icon/components'
+---
+
+<div class="hello">
+    <span class="waving-hand">👋</span>
+    😊
+    I'am HuaYang, a front-end developers.
+</div>
+
+<style is:inline>
+    .hello {
+        margin-top: 5rem;
+        position: relative;
+        padding: 2rem;
+        border: 2px solid #211a2e;
+        border-radius: 16px;
+    }
+
+    .hello > .waving-hand {
+        position: absolute;
+        top: -2rem;
+        font-size: 7rem;
+        animation: waving 3s ease-in-out infinite;
+    }
+
+    @keyframes waving {
+        0% {
+            font-size: 2rem;
+        }
+
+        50%{
+            font-size: 7rem;
+        }
+
+        100% {
+            font-size: 2rem;
+        }
+    }
+</style>

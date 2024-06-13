@@ -1,0 +1,73 @@
+---
+
+---
+
+<ul class="recommendation">
+    <li>
+        <span class="date">06\07\2024</span><br />
+        <span class="title">WEB前端设计之配色</span>
+    </li>
+    <li>
+        <span class="date">05\25\2024</span><br />
+        <span class="title">所有权机制-RUST探索</span>
+    </li>
+    <li>
+        <span class="date">04\18\2024</span><br />
+        <span class="title">ZIG-GAMEDEV游戏开发</span>
+    </li>
+    <li>
+        <span class="date">03\11\2024</span><br />
+        <span class="title">WEBGPU-C++教程</span>
+    </li>
+</ul>
+
+<style is:inline>
+    .recommendation {
+        border: 2px solid #211a2e;
+        border-radius: 16px;
+        padding: 2rem;
+        list-style: none;
+    }
+
+    .recommendation > li {
+        color: #3b6563;
+        position: relative;
+    }
+
+    .recommendation > li::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border: 2px solid gray;
+        border-radius: 50%;
+        position: absolute;
+        left: -12px;
+        top: 16px;
+        transform: translate(-50%, -50%);
+        /* animation: spin 10s ease-in-out infinite; */
+    }
+
+    @keyframes spin {
+        0% {
+            width: 8px;
+            height: 8px;
+        }
+
+        50% {
+            width: 12px;
+            height: 12px;
+        }
+
+        100% {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    .recommendation > li > .date {
+        color: rgb(22, 44, 31);
+    }
+    .recommendation > li > .title {
+        cursor: pointer;
+    }
+</style>

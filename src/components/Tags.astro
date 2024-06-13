@@ -1,0 +1,43 @@
+---
+import {Icon} from 'astro-icon/components'
+---
+
+<div class="tags">
+    <div class="tags-head">
+        <Icon size={32} name="mdi:tags" />Tags
+    </div>
+    <div class="tags-list">
+        <div>React</div>
+        <div>WebGPU</div>
+        <div>Rust</div>
+        <div>Vue</div>
+        <div>Threejs</div>
+    </div>
+</div>
+
+<style is:inline>
+    .tags {
+        border: 2px solid #211a2e;
+        border-radius: 16px;
+        padding: 2rem;
+    }
+
+    .tags > .tags-head {
+        display: flex;
+        align-items: center;
+    }
+
+    .tags > .tags-list {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .tags-list > div{
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border: 2px solid #42467a;
+        border-radius: 1.5rem;
+    }
+</style>
