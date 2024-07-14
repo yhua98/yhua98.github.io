@@ -1,24 +1,21 @@
 ---
+import { getCollection } from "astro:content";
 
+const docs = await getCollection("docs");
 ---
 
 <ul class="recommendation">
-    <li>
-        <span class="date">06\07\2024</span><br />
-        <span class="title">WEB前端设计之配色</span>
-    </li>
-    <li>
-        <span class="date">05\25\2024</span><br />
-        <span class="title">所有权机制-RUST探索</span>
-    </li>
-    <li>
-        <span class="date">04\18\2024</span><br />
-        <span class="title">ZIG-GAMEDEV游戏开发</span>
-    </li>
-    <li>
-        <span class="date">03\11\2024</span><br />
-        <span class="title">WEBGPU-C++教程</span>
-    </li>
+    {
+        docs.map((doc) => (
+            <li>
+                <span class="date">06\07\2024</span>
+                <br />
+                <span class="title">
+                    <a href={doc.collection+'/'+doc.slug}>{doc.data.title}</a>
+                </span>
+            </li>
+        ))
+    }
 </ul>
 
 <style is:inline>

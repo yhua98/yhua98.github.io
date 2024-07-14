@@ -52,24 +52,31 @@ import Header from "../components/Header.astro";
 				rgb(31, 28, 42) 2px,
 				transparent 2px
 			),
-			linear-gradient(to bottom, rgb(31, 29, 41) 2px, transparent 2px), */
-		background-image: radial-gradient(
+			linear-gradient(to bottom, rgb(31, 29, 41) 2px, transparent 2px), 
+		
+		radial-gradient(
 			circle,
 			rgb(34, 29, 41) 2px,
 			transparent 2px
-		);
+		)
+		
+			*/
+		background-image: linear-gradient(
+				to right,
+				rgb(31, 28, 42) 2px,
+				transparent 2px
+			),
+			linear-gradient(to bottom, rgb(31, 29, 41) 2px, transparent 2px);
 		background-size: 20px 20px;
 		background-position: center center;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	@font-face {
+		font-family: tutumianhuatang;
+		src: url("/fonts/Tutumianhuatang-Bold-2.ttf");
+	}
+
+	.content {
+		font-family: "tutumianhuatang";
 	}
 </style>
