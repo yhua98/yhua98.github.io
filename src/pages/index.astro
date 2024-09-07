@@ -4,8 +4,9 @@ import Layout from '../layouts/Layout.astro';
 import Hello from '../components/Hello.astro';
 import Recommendation from '../components/Recommendation.astro';
 import Tags from '../components/Tags.astro';
-import ThemeSwitch from '../components/ThemeSwitch.astro';
+import Click from '../components/Click.vue';
 import Row from '../components/Row.astro';
+import NavButton from '../components/NavButton.vue';
 ---
 
 <Layout title="YANGHUA">
@@ -41,12 +42,16 @@ import Row from '../components/Row.astro';
 		
 		<Row>
 			<Hello />
-			<ThemeSwitch />
+            <Click />
 		</Row>
 
 		<Recommendation />
 
 		<Tags />
+
+		<NavButton client:load>
+			导航按钮
+		</NavButton>
 	</main>
 </Layout>
 

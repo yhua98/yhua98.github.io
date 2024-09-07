@@ -18,12 +18,14 @@ const docs = await getCollection("docs");
     }
 </ul>
 
-<style is:inline>
+<style lang="scss" is:inline>
     .recommendation {
         border: 2px solid #211a2e;
         border-radius: 16px;
         padding: 2rem;
         list-style: none;
+        position: relative;
+        @extend %border-gradient;
     }
 
     .recommendation > li {
@@ -41,7 +43,6 @@ const docs = await getCollection("docs");
         left: -12px;
         top: 16px;
         transform: translate(-50%, -50%);
-        /* animation: spin 10s ease-in-out infinite; */
     }
 
     @keyframes spin {

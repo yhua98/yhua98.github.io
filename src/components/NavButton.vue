@@ -1,19 +1,24 @@
----
-import { Icon } from "astro-icon/components";
----
+<script lang="ts" setup>
 
-<div class="hello">
-    <span class="waving-hand">👋</span>
-    😊 I'am HuaYang, a front-end developers.
-</div>
+</script>
 
-<style is:inline>
-    .hello {
-        margin-top: 5rem;
+
+<template>
+    <button class="nav-button">
+        <slot></slot>
+    </button>
+</template>
+
+<style lang="scss" scoped>
+    .nav-button {
+        background-color: #13151a;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: aliceblue;
         position: relative;
-        padding: 2rem;
-        border-radius: 16px;
-        backdrop-filter: blur(50px);
     }
 
     @property --angle{
@@ -22,7 +27,7 @@ import { Icon } from "astro-icon/components";
         initial-value: 0deg;
     }
 
-    .hello::before {
+    .nav-button::before {
         --border-width: 3px;
         content: "";
         position: absolute;
@@ -30,7 +35,7 @@ import { Icon } from "astro-icon/components";
         height: 100%;
         top: calc(0px - var(--border-width));
         left: calc(0px - var(--border-width));
-        border-radius: 16px;
+        border-radius: 5px;
         z-index: -1;
         background-clip: border-box;
         padding: var(--border-width);
@@ -44,7 +49,7 @@ import { Icon } from "astro-icon/components";
         animation: rotate-deg 3s ease-in forwards infinite;
     }
 
-    .hello::after{
+    .nav-button::after{
         content: "";
         position: absolute;
         top: 0;
@@ -52,7 +57,7 @@ import { Icon } from "astro-icon/components";
         bottom: 0;
         left: 0;
         background-color: #211a2e;
-        border-radius: 16px;
+        border-radius: 5px;
         /* filter: blur(10px); */
         z-index: -1;
     }
@@ -64,28 +69,6 @@ import { Icon } from "astro-icon/components";
 
         100% {
             --angle:360deg;
-        }
-    }
-
-    .hello > .waving-hand {
-        position: absolute;
-        top: -2rem;
-        font-size: 3rem;
-        transform-origin: bottom center;
-        animation: waving 3s ease-in-out infinite;
-    }
-
-    @keyframes waving {
-        0% {
-            transform: rotateZ(-30deg);
-        }
-
-        50% {
-            transform: rotateZ(30deg);
-        }
-
-        100% {
-            transform: rotateZ(-30deg);
         }
     }
 </style>
