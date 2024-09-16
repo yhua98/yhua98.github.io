@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Editor from '../components/Editor.vue'
+
+---
+
+<Layout title='About'>
+    <div class="col">
+        <Editor class="col-editor" client:load/>
+    </div>
+</Layout>
+
+<style>
+    .col-editor {
+        margin: 0 auto;
+        max-width: 768px;
+    }
+</style>
+
