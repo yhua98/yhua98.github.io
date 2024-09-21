@@ -4,53 +4,17 @@ import { Icon } from 'astro-icon/components'
 const IconSize = 24
 ---
 
-<div class="header">
-    <div class="logo">
-        <span>YHUAONE.CN</span>
+<div class="h-64px flex items-center py-0 px-16px sticky top-8px z-100">
+    <div class="h-full flex items-center absolute">
+        <span class="text-20px">YHUAONE.CN</span>
     </div>
-    <div class="nav">
-        <Icon class="nav-item" size={IconSize} name="mdi:home-search" />
-        <Icon class="nav-item" size={IconSize} name="mdi:paper-text" />
-        <Icon class="nav-item" size={IconSize} name="mdi:tags" />
-        <Icon class="nav-item" size={IconSize} name="mdi:about" />
+    <div class="my-0 mx-auto p-8px border-(2px solid [var(--bg-200)]) text-[var(--text-200)] rounded-16px flex items-center gap-16px backdrop-blur-50px">
+        <a href="/"><Icon class="cursor-pointer" size={IconSize} name="mdi:home-search" /></a>
+        <a href="/about"><Icon class="cursor-pointer" size={IconSize} name="mdi:paper-text" /></a>
+        <Icon class="cursor-pointer" size={IconSize} name="mdi:tags" />
+        <a href="/databoard">
+            <Icon class="cursor-pointer" size={IconSize} name="mdi:view-dashboard-edit" />
+        </a>
+        <Icon class="cursor-pointer" size={IconSize} name="mdi:about" />
     </div>
 </div>
-
-<style>
-    .header {
-        height: 64px;
-        display: flex;
-        align-items: center;
-        padding: 0 2rem;
-        /* position: relative; */
-        position: sticky;
-        top: 8px;
-        z-index: 100;
-    }
-
-    .header > .logo {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        position: absolute;
-    }
-
-    .logo > span{
-        font-size: 1.5rem;
-    }
-
-    .header > .nav {
-        margin: 0 auto;
-        padding: 8px;
-        border: 2px solid rgb(47, 39, 62);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        backdrop-filter: blur(50px);
-    }
-
-    .nav > .nav-item {
-        cursor: pointer;
-    }
-</style>

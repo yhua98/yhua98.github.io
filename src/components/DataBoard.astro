@@ -1,0 +1,31 @@
+---
+import Editor from "./CardEditor.vue";
+import FloatSwitch from "./FloatSwitch.vue";
+import Show from "./CardShow.vue";
+---
+
+<div class="flex h-100vh">
+    <FloatSwitch class="z-1" client:load />
+    <div class="grow-1">
+        <div
+            class="p-8px flex items-center h-64px w-100% border-b-(1px solid [var(--bg-200)])"
+        >
+            选择使用astro的原因是可以同时使用多个框架编写组件
+        </div>
+        <div class="content-wrapper p-8px h-[calc(100%-64px)] overflow-auto">
+            <div class="w-550px">
+                <Editor client:load />
+                <Show client:load />
+            </div>
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    .content-wrapper {
+        position: relative;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+</style>
