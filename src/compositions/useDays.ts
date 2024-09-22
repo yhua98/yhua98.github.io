@@ -48,9 +48,9 @@ export const useDays = () => {
 
         const year = String(_date.getFullYear()).split('').map((item) => year_zw[Number(item) ?? 0]).join('') + '年'
 
-        const month = month_zw[(_date.getMonth() + 1) ?? 0] + '月'
+        const month = month_zw[(_date.getMonth() + 1)] + '月'
 
-        const day = day_zw[_date.getDate() ?? 0] + '日'
+        const day = day_zw[_date.getDate()] + '日'
 
         return [year, month, day]
     })

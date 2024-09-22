@@ -19,7 +19,7 @@ const { days, oneDayWeek, day, month, hours, minute, second,week,ymd } = useDays
                 <span v-for="day in oneDayWeek"
                     class="text-12px inline-flex items-center justify-center rounded-10px w-20px h-20px"></span>
                 <template v-for="_day in days">
-                    <span :class="Number(_day) == Number(day) ? 'ping' : ''"
+                    <span :class="_day.toString() == day ? 'ping' : ''"
                         class="text-12px cursor-pointer inline-flex items-center justify-center rounded-10px w-20px h-20px bg-[var(--bg-200)] shadow">{{
                             _day
                         }}</span>
